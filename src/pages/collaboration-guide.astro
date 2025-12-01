@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Header, Footer, Menu } from '../components';
+---
+
+<Layout title="Collaboration Guide - Flamingalo">
+  <a class="skip-link" href="#content">Skip to content</a>
+  
+  <Header client:load />
+  <Menu client:load />
+  
+  <main id="content" style="padding-top: 100px; min-height: 80vh;">
+    <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px;">
+      <h1 style="font-size: 3rem; margin-bottom: 20px; text-align: center;">Collaboration Guide</h1>
+      <p style="font-size: 1.2rem; color: #666; margin-bottom: 40px; text-align: center;">
+        Learn how to contribute and collaborate with the Flamingalo community.
+      </p>
+      
+      <div style="text-align: left; line-height: 1.8; color: #333;">
+        <h2 style="font-size: 2rem; margin-top: 40px; margin-bottom: 20px; color: #e74c76;">🤝 How to Contribute</h2>
+        <p style="margin-bottom: 20px;">
+          Flamingalo is built by the community, for the community. We welcome contributions of all kinds:
+        </p>
+        <ul style="margin-left: 20px; margin-bottom: 30px;">
+          <li style="margin-bottom: 10px;">🎨 Art installations and performances</li>
+          <li style="margin-bottom: 10px;">🎪 Theme camps and workshops</li>
+          <li style="margin-bottom: 10px;">🛠️ Infrastructure and logistics support</li>
+          <li style="margin-bottom: 10px;">💻 Website and tech development</li>
+          <li style="margin-bottom: 10px;">📢 Marketing and community outreach</li>
+        </ul>
+
+        <h2 style="font-size: 2rem; margin-top: 40px; margin-bottom: 20px; color: #e74c76;">📚 Getting Started</h2>
+        <p style="margin-bottom: 20px;">
+          To get started with collaboration:
+        </p>
+        <ol style="margin-left: 20px; margin-bottom: 30px;">
+          <li style="margin-bottom: 10px;">Join our <a href="https://t.me/+8rF8c-tPM9c5MGU0" style="color: #e74c76; text-decoration: underline;">Telegram group</a></li>
+          <li style="margin-bottom: 10px;">Read the <a href="https://drive.google.com/file/d/1vd2aHBn61nMJj_PD7GqsoHOPr73e7DNK/view?usp=sharing" style="color: #e74c76; text-decoration: underline;">Survival Guide</a></li>
+          <li style="margin-bottom: 10px;">Introduce yourself and share your ideas</li>
+          <li style="margin-bottom: 10px;">Connect with other collaborators</li>
+        </ol>
+
+        <h2 style="font-size: 2rem; margin-top: 40px; margin-bottom: 20px; color: #e74c76;">🔥 The 10 Principles</h2>
+        <p style="margin-bottom: 20px;">
+          All collaborations at Flamingalo are guided by the 10 Principles of Burning Man:
+        </p>
+        <ul style="margin-left: 20px; margin-bottom: 30px;">
+          <li style="margin-bottom: 10px;">Radical Inclusion</li>
+          <li style="margin-bottom: 10px;">Gifting</li>
+          <li style="margin-bottom: 10px;">Decommodification</li>
+          <li style="margin-bottom: 10px;">Radical Self-reliance</li>
+          <li style="margin-bottom: 10px;">Radical Self-expression</li>
+          <li style="margin-bottom: 10px;">Communal Effort</li>
+          <li style="margin-bottom: 10px;">Civic Responsibility</li>
+          <li style="margin-bottom: 10px;">Leaving No Trace</li>
+          <li style="margin-bottom: 10px;">Participation</li>
+          <li style="margin-bottom: 10px;">Immediacy</li>
+        </ul>
+
+        <div style="text-align: center; margin-top: 50px;">
+          <a href="/" style="display: inline-block; background: #e74c76; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; margin-right: 10px;">
+            Back to Home
+          </a>
+          <a href="/blog" style="display: inline-block; background: #333; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px;">
+            Read Blog
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer client:load />
+</Layout>
+
+

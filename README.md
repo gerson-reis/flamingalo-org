@@ -1,184 +1,184 @@
 # Flamingalo - Burn Portugal 🦩🔥
 
-Site oficial do Flamingalo, evento inspirado no Burning Man realizado em Portugal.
+Official website for Flamingalo, the Burning Man-inspired event in Portugal.
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
-- **Astro 5** - Framework web moderno e performático
-- **React 19** - Biblioteca para construção de interfaces
-- **TypeScript** - Tipagem estática para JavaScript
-- **Tailwind CSS 4** - Framework CSS utility-first
-- **HeroUI** - Biblioteca de componentes React
+- **Astro 5** - Modern, fast web framework
+- **React 19** - UI component library
+- **TypeScript** - Static typing for JavaScript
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **HeroUI** - React component library
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 flamingalo/
 ├── src/
-│   ├── components/          # Componentes React reutilizáveis
-│   │   ├── Header.tsx       # Cabeçalho com logo
-│   │   ├── Hero.tsx         # Banner animado principal
-│   │   ├── InfoCard.tsx     # Card de informação individual
-│   │   ├── InfoSection.tsx  # Seção com cards informativos
-│   │   ├── SurvivalGuide.tsx # Seção do guia de sobrevivência
-│   │   ├── SocialCard.tsx   # Card de rede social
-│   │   ├── GetInvolved.tsx  # Seção "Participe"
-│   │   ├── Footer.tsx       # Rodapé
-│   │   └── index.ts         # Exportações centralizadas
+│   ├── components/          # Reusable React components
+│   │   ├── Header.tsx       # Header with logo
+│   │   ├── Hero.tsx         # Animated hero banner
+│   │   ├── InfoCard.tsx     # Info card component
+│   │   ├── InfoSection.tsx  # Info cards section
+│   │   ├── SurvivalGuide.tsx # Survival guide section
+│   │   ├── SocialCard.tsx   # Social media card
+│   │   ├── GetInvolved.tsx  # Get involved section
+│   │   ├── Footer.tsx       # Footer component
+│   │   └── index.ts         # Component exports
 │   ├── layouts/
-│   │   └── Layout.astro     # Layout base da aplicação
+│   │   └── Layout.astro     # Base layout
 │   ├── pages/
-│   │   └── index.astro      # Página inicial
+│   │   └── index.astro      # Home page
 │   └── styles/
-│       └── global.css       # Estilos globais e animações
-├── public/                  # Arquivos estáticos
+│       └── global.css       # Global styles & animations
+├── public/                  # Static assets
 │   ├── favicon.svg
 │   ├── flamingalo-logo-text-2025-v1.png
 │   ├── mundo-bizarro-type-pink.png
 │   └── mundo-bizarro-pano-v2.jpg
-├── astro.config.mjs         # Configuração do Astro
-├── tailwind.config.ts       # Configuração do Tailwind
+├── astro.config.mjs         # Astro configuration
+├── tailwind.config.ts       # Tailwind configuration
 └── package.json
 
 ```
 
-## 🎨 Componentes
+## 🎨 Components
 
 ### Header
-Cabeçalho fixo com logo do Flamingalo, com efeito de fundo branco.
+Fixed header with logo and white background effect.
 
 ### Hero
-Banner principal com:
-- Animação de scroll infinito no fundo
-- Logo "Mundo Bizarro" com blend mode especial
-- Informações de data e local
-- Botão CTA com animações de skew
+Main banner featuring:
+- Infinite scroll animation background
+- "Mundo Bizarro" logo with blend mode
+- Date and location info
+- CTA button with skew animations
 
 ### InfoSection
-Grade responsiva com 4 cards informativos, cada um com emoji e texto.
+Responsive grid with 4 info cards (emoji + text).
 
 ### SurvivalGuide
-Seção para download do guia de sobrevivência com ícone de download.
+Download section for the survival guide PDF.
 
 ### GetInvolved
-Grade de 6 cards sociais com links para:
-- Telegram (principal e newsletter)
+Grid of 6 social media cards with links to:
+- Telegram (main & newsletter)
 - Instagram
 - Facebook
-- Newsletter por email
-- Informações sobre participação na organização
+- Email newsletter
+- Organization info
 
 ### Footer
-Rodapé simples com descrição do evento.
+Simple footer with event description.
 
-## 🎯 Características
+## 🎯 Features
 
-### Componentização
-- Componentes React isolados e reutilizáveis
-- Props tipadas com TypeScript
-- Separação clara de responsabilidades
+### Componentization
+- Isolated, reusable React components
+- TypeScript-typed props
+- Clear separation of concerns
 
 ### Performance
-- Uso de Astro para SSG (Static Site Generation)
-- Carregamento seletivo de componentes React com `client:load`
-- Otimização de imagens
+- Static Site Generation (SSG) with Astro
+- Selective React component hydration with `client:load`
+- Image optimization
 
-### Acessibilidade
-- Skip link para navegação por teclado
-- Alt text em imagens
-- HTML semântico
-- Estrutura hierárquica de headings
+### Accessibility
+- Skip navigation link
+- Alt text on images
+- Semantic HTML
+- Proper heading hierarchy
 
-### Responsividade
-- Design mobile-first
-- Grid system responsivo
-- Breakpoints para tablet e desktop
-- Imagens adaptativas
+### Responsiveness
+- Mobile-first design
+- Responsive grid system
+- Breakpoints for tablet and desktop
+- Adaptive images
 
-### Animações
-- Banner com scroll infinito (keyframes CSS)
-- Botões com animações de skew
-- Hover effects suaves
-- Transform 3D para melhor performance
+### Animations
+- Infinite scrolling banner (CSS keyframes)
+- Skew button animations
+- Smooth hover effects
+- 3D transforms for better performance
 
-## 🛠️ Comandos
+## 🛠️ Commands
 
 ```bash
-# Instalar dependências
+# Install dependencies
 npm install
 
-# Iniciar servidor de desenvolvimento
+# Start development server
 npm run dev
 
-# Build para produção
+# Build for production
 npm run build
 
-# Preview da build
+# Preview build
 npm run preview
 ```
 
-## 🌐 Deploy
+## 🌐 Deployment
 
-O projeto está configurado para deploy estático. Pode ser hospedado em:
+The project is ready to deploy to:
 - Vercel
 - Netlify
 - GitHub Pages
 - Cloudflare Pages
 
-## 📝 Melhores Práticas Implementadas
+## 📝 Best Practices Implemented
 
-### Estrutura
-- ✅ Componentes pequenos e focados em uma responsabilidade
-- ✅ Separação de layout, páginas e componentes
-- ✅ Arquivo de exportação centralizado (`index.ts`)
+### Structure
+- ✅ Small, focused components
+- ✅ Separation of layouts, pages, and components
+- ✅ Centralized exports (`index.ts`)
 
 ### TypeScript
-- ✅ Interfaces para todas as props
-- ✅ Tipagem estrita habilitada
-- ✅ Props com valores padrão
+- ✅ Interfaces for all props
+- ✅ Strict typing enabled
+- ✅ Props with default values
 
 ### CSS
-- ✅ Estilos globais centralizados
-- ✅ CSS custom properties para animações
+- ✅ Centralized global styles
+- ✅ CSS custom properties for animations
 - ✅ Mobile-first approach
 - ✅ BEM-like naming convention
 
 ### Performance
-- ✅ Lazy loading de componentes React
-- ✅ Preload de fontes
-- ✅ Otimização de assets
-- ✅ Transform 3D para animações suaves
+- ✅ Lazy loading of React components
+- ✅ Font preloading
+- ✅ Asset optimization
+- ✅ 3D transforms for smooth animations
 
-### Acessibilidade
+### Accessibility
 - ✅ Skip navigation link
 - ✅ Semantic HTML
-- ✅ ARIA labels onde necessário
-- ✅ Contraste de cores adequado
+- ✅ ARIA labels where needed
+- ✅ Proper color contrast
 
-## 🎨 Paleta de Cores
+## 🎨 Color Palette
 
-- **Rosa Principal**: `#e74c76`
-- **Amarelo Destaque**: `yellow`
-- **Fundo Claro**: `#f8f8f8`
-- **Texto Escuro**: `#333`
+- **Primary Pink**: `#e74c76`
+- **Highlight Yellow**: `yellow`
+- **Light Background**: `#f8f8f8`
+- **Dark Text**: `#333`
 - **Footer**: `#2c2c2c`
 
 ## 📱 Breakpoints
 
-- **Mobile**: até 600px
+- **Mobile**: up to 600px
 - **Tablet**: 768px
 - **Desktop**: 1024px+
 
-## 🔗 Links Externos
+## 🔗 External Links
 
-- [Formulário de Inscrição](https://docs.google.com/forms/d/e/1FAIpQLScs8aI-l4wNJsx-DzniUFuuZE5TOFTVsRtmzK8fiW-8_zx-qw/viewform?usp=header)
-- [Guia de Sobrevivência](https://drive.google.com/file/d/1vd2aHBn61nMJj_PD7GqsoHOPr73e7DNK/view?usp=sharing)
+- [Registration Form](https://docs.google.com/forms/d/e/1FAIpQLScs8aI-l4wNJsx-DzniUFuuZE5TOFTVsRtmzK8fiW-8_zx-qw/viewform?usp=header)
+- [Survival Guide](https://drive.google.com/file/d/1vd2aHBn61nMJj_PD7GqsoHOPr73e7DNK/view?usp=sharing)
 - [Telegram Flamingalo 2025](https://t.me/+8rF8c-tPM9c5MGU0)
 - [Instagram](https://www.instagram.com/flamingalo.pt/)
 - [Facebook](https://www.facebook.com/groups/flamingalo/)
 - [Telegram Newsletter](https://t.me/flamingalo_news)
 - [Email Newsletter](https://subscribepage.io/Flamingalo)
 
-## 📄 Licença
+## 📄 License
 
-© Flamingalo - Todos os direitos reservados
+© Flamingalo - All rights reserved
