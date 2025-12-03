@@ -1,10 +1,7 @@
-export { Header } from './Header';
-export { Hero } from './Hero';
-export { InfoCard } from './InfoCard';
-export { InfoSection } from './InfoSection';
-export { SurvivalGuide } from './SurvivalGuide';
-export { SocialCard } from './SocialCard';
-export { GetInvolved } from './GetInvolved';
-export { Footer } from './Footer';
-export { Menu } from './Menu';
+// Re-export 2025 components as default
+export * from './2025';
+
+// Named exports for specific years
+export * as Components2025 from './2025';
+export * as Components2026 from './2026';
 

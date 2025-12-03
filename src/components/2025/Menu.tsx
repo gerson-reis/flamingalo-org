@@ -9,6 +9,14 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
   {
+    label: 'Flamingalo 2025',
+    href: '/2025'
+  },
+  {
+    label: 'Flamingalo 2026',
+    href: '/2026'
+  },
+  {
     label: 'Blog Posts',
     href: '/blog'
   },
@@ -44,7 +52,7 @@ export const Menu: React.FC = () => {
 
   return (
     <>
-      <button 
+      <button
         className="menu-button"
         onClick={toggleMenu}
         aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -56,13 +64,13 @@ export const Menu: React.FC = () => {
           <span></span>
         </span>
       </button>
-      
+
       <div className={`menu-overlay ${isOpen ? 'open' : ''}`}>
         <nav className="menu-nav">
           <ul className="menu-list">
             {menuItems.map((item, index) => (
               <li key={index} className="menu-item">
-                <a 
+                <a
                   href={item.href}
                   className="menu-link"
                   onClick={handleLinkClick}

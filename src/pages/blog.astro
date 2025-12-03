@@ -1,27 +1,47 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Header, Footer, Menu } from '../components';
+import { Header, Footer, Menu } from '../components/2025';
+import { BlogFeed } from '../components/blog/BlogFeed';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+
+const sortedPosts = allPosts.sort((a, b) => 
+  b.data.date.getTime() - a.data.date.getTime()
+).map(post => ({
+  title: post.data.title,
+  slug: post.id,
+  date: post.data.date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }),
+  author: post.data.author,
+  authorImage: post.data.authorImage,
+  image: post.data.image,
+  excerpt: post.data.excerpt,
+  categories: post.data.categories,
+}));
 ---
 
 <Layout title="Blog - Flamingalo">
   <a class="skip-link" href="#content">Skip to content</a>
   
-  <Header client:load />
+  <Header />
   <Menu client:load />
   
-  <main id="content" style="padding-top: 100px; min-height: 80vh;">
-    <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px; text-align: center;">
-      <h1 style="font-size: 3rem; margin-bottom: 20px;">Blog</h1>
-      <p style="font-size: 1.2rem; color: #666; margin-bottom: 40px;">
-        Coming soon! We're working on bringing you the latest news and stories from the Flamingalo community.
+  <main id="content" class="blog-page">
+    <div class="blog-header">
+      <h1 class="blog-title">Blog Flamingalo</h1>
+      <p class="blog-subtitle">
+        Stories, experiences and inspirations from the Burn community in Portugal 🦩🔥
       </p>
-      <a href="/" style="display: inline-block; background: #e74c76; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px;">
-        Back to Home
-      </a>
     </div>
+
+    <BlogFeed client:load posts={sortedPosts} />
   </main>
   
-  <Footer client:load />
+  <Footer />
 </Layout>
 
 

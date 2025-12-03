@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Header, Hero, InfoSection, SurvivalGuide, GetInvolved, Footer, Menu } from '../../components/2026';
+---
+
+<Layout title="Flamingalo 2026 - Burn Portugal">
+  <a class="skip-link" href="#content">Skip to content</a>
+  
+  <Header client:load />
+  <Menu client:load />
+  
+  <main id="content" class="site-main">
+    <Hero client:load />
+    <InfoSection client:load />
+    <SurvivalGuide client:load />
+    <GetInvolved client:load />
+  </main>
+  
+  <Footer client:load />
+</Layout>
+

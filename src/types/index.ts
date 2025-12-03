@@ -40,3 +40,17 @@ export interface SurvivalGuideProps {
   guideUrl?: string;
 }
 
+export interface BlogPost {
+  title: string;
+  slug: string;
+  date: string;
+  author: string;
+  authorImage: string;
+  image?: string;
+  excerpt: string;
+  categories: string[];
+}
+
+export interface BlogCardProps extends BlogPost { }
+
+

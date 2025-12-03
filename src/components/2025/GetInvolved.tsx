@@ -1,6 +1,6 @@
 import React from 'react';
 import { SocialCard } from './SocialCard';
-import { SOCIAL_LINKS } from '../constants/social-links';
+import { SOCIAL_LINKS } from '../../constants/2025/social-links';
 
 export const GetInvolved: React.FC = () => {
 
