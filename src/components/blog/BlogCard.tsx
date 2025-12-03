@@ -32,7 +32,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
 
       {image && (
         <div className="blog-card-image">
-          <a href={`/blog/${slug}`}>
+          <a href={`/blog/${slug.replace('/index.md', '')}`}>
             <img src={image} alt={title} loading="lazy" />
           </a>
         </div>
@@ -40,7 +40,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
 
       <div className="blog-card-content">
         <h2 className="blog-card-title">
-          <a href={`/blog/${slug}`}>{title}</a>
+          <a href={`/blog/${slug.replace('/index.md', '')}`}>{title}</a>
         </h2>
 
         <p className="blog-card-excerpt">{excerpt}</p>
@@ -55,7 +55,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
           </div>
         )}
 
-        <a href={`/blog/${slug}`} className="blog-card-link">
+        <a href={`/blog/${slug.replace('/index.md', '')}`} className="blog-card-link">
           Read more →
         </a>
       </div>
