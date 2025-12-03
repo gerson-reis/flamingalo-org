@@ -1,0 +1,31 @@
+---
+export interface Props {
+  logoUrl?: string;
+  logoAlt?: string;
+}
+
+const {
+  logoUrl = "/flamingalo-logo-text-2025-v1.png",
+  logoAlt = "Flamingalo Burn Portugal"
+} = Astro.props;
+---
+
+<header id="site-header" class="site-header">
+  <div class="header-inner">
+    <div class="site-branding">
+      <div class="site-logo">
+        <a href="/" class="custom-logo-link" rel="home">
+          <img 
+            src={logoUrl}
+            class="custom-logo"
+            alt={logoAlt}
+            width="1160"
+            height="256"
+            loading="eager"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
