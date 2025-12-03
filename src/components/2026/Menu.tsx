@@ -9,20 +9,20 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
   {
-    label: 'Flamingalo 2025',
-    href: '/2025'
+    label: 'Information and News',
+    href: '/blog'
+  },
+  {
+    label: 'Collaboration Guide',
+    href: '/collaboration-guide'
   },
   {
     label: 'Flamingalo 2026',
     href: '/2026'
   },
   {
-    label: 'Blog Posts',
-    href: '/blog'
-  },
-  {
-    label: 'Collaboration Guide',
-    href: '/collaboration-guide'
+    label: 'Flamingalo 2025',
+    href: '/2025'
   }
 ];
 
