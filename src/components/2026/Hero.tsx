@@ -3,9 +3,9 @@ import type { HeroProps } from '../types';
 
 export const Hero: React.FC<HeroProps> = ({
   title = "Mundo Bizarro",
-  date = "April 30 – May 5",
+  date = "May 27 – June 1",
   location = "Alentejo, Portugal",
-  ctaText = "Get Flicket",
+  ctaText = "Get Ticket",
   ctaLink = "https://docs.google.com/forms/d/e/1FAIpQLScs8aI-l4wNJsx-DzniUFuuZE5TOFTVsRtmzK8fiW-8_zx-qw/viewform?usp=header"
 }) => {
   return (
