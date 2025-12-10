@@ -6,7 +6,7 @@ export const Hero: React.FC<HeroProps> = ({
   date = "May 27 – June 1",
   location = "Alentejo, Portugal",
   ctaText = "Get Ticket",
-  ctaLink = "https://docs.google.com/forms/d/e/1FAIpQLScs8aI-l4wNJsx-DzniUFuuZE5TOFTVsRtmzK8fiW-8_zx-qw/viewform?usp=header"
+  ctaLink = "https://docs.google.com/forms/d/e/1FAIpQLSdAFwvftKjstbdiJIUSDXiUs28g-QbH1EG5ldhXM1W4k78lig/viewform"
 }) => {
   return (
     <div className="hero">
