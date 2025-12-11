@@ -3,7 +3,7 @@ title: "Junte-se à Equipe do Website do Flamingalo!"
 date: 2024-12-11
 author: Flamingalo ORG
 authorImage: "/blog/flamingalo-avatar.png"
-image: "/blog/join-team-header.png"
+image: "/blog/We need new leads!.png"
 excerpt: "Quer ajudar a construir e melhorar nosso website? Estamos procurando desenvolvedores, designers, escritores e membros da comunidade para colaborar neste projeto aberto!"
 categories: ["Comunidade", "Colaboração", "Tecnologia"]
 lang: pt
