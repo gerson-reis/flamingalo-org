@@ -1,7 +1,12 @@
 import React from 'react';
 import { InfoCard } from './InfoCard';
+import type { Language as LangType } from '../../i18n';
 
-export const InfoSection: React.FC = () => {
+interface InfoSectionProps {
+  lang?: LangType;
+}
+
+export const InfoSection: React.FC<InfoSectionProps> = ({ lang = 'en' }) => {
   return (
     <section className="info-section">
       <div className="info-grid">

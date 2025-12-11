@@ -6,6 +6,7 @@ authorImage: "/blog/flamingalo-avatar.png"
 image: "/blog/join-team-header.png"
 excerpt: "Want to help build and improve our website? We're looking for developers, designers, writers, and community members to collaborate on this open project!"
 categories: ["Community", "Collaboration", "Technology"]
+lang: en
 ---
 
 # Join the Flamingalo Website Team! 🦩🔥

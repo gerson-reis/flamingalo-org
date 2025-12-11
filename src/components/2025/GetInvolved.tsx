@@ -1,8 +1,13 @@
 import React from 'react';
 import { SocialCard } from './SocialCard';
-import { SOCIAL_LINKS } from '../../constants/2025/social-links';
+import { SOCIAL_LINKS } from '../../constants/2026/social-links';
+import type { Language as LangType } from '../../i18n';
 
-export const GetInvolved: React.FC = () => {
+interface GetInvolvedProps {
+  lang?: LangType;
+}
+
+export const GetInvolved: React.FC<GetInvolvedProps> = ({ lang = 'en' }) => {
 
   return (
     <section className="get-involved-section">

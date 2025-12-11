@@ -1,32 +1,39 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useTranslations, getLocalizedPath, type Language } from '../../i18n/utils';
+import type { Language as LangType } from '../../i18n';
 
 interface MenuItem {
   label: string;
   href: string;
 }
 
-const menuItems: MenuItem[] = [
-  {
-    label: 'Information and News',
-    href: '/blog'
-  },
-  {
-    label: 'Collaboration Guide',
-    href: '/collaboration-guide'
-  },
-  {
-    label: 'Flamingalo 2026',
-    href: '/2026'
-  },
-  {
-    label: 'Flamingalo 2025',
-    href: '/2025'
-  }
-];
+interface MenuProps {
+  lang?: LangType;
+}
 
-export const Menu: React.FC = () => {
+export const Menu: React.FC<MenuProps> = ({ lang = 'en' }) => {
+  const t = useTranslations(lang);
+  
+  const menuItems: MenuItem[] = [
+    {
+      label: t('nav.blog'),
+      href: getLocalizedPath('/blog', lang)
+    },
+    {
+      label: t('nav.guide'),
+      href: getLocalizedPath('/collaboration-guide', lang)
+    },
+    {
+      label: t('nav.2026'),
+      href: getLocalizedPath('/2026', lang)
+    },
+    {
+      label: t('nav.2025'),
+      href: getLocalizedPath('/2025', lang)
+    }
+  ];
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -52,7 +59,7 @@ export const Menu: React.FC = () => {
 
   return (
     <>
-      <button
+      <button 
         className="menu-button"
         onClick={toggleMenu}
         aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -64,13 +71,13 @@ export const Menu: React.FC = () => {
           <span></span>
         </span>
       </button>
-
+      
       <div className={`menu-overlay ${isOpen ? 'open' : ''}`}>
         <nav className="menu-nav">
           <ul className="menu-list">
             {menuItems.map((item, index) => (
               <li key={index} className="menu-item">
-                <a
+                <a 
                   href={item.href}
                   className="menu-link"
                   onClick={handleLinkClick}

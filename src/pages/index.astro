@@ -1,20 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Header, Hero, InfoSection, SurvivalGuide, GetInvolved, Footer, Menu } from '../components/2026';
+import { LanguageSwitcher } from '../components/LanguageSwitcher';
 ---
 
 <Layout title="Flamingalo 2026 - Burn Portugal">
   <a class="skip-link" href="#content">Skip to content</a>
   
-  <Header client:load />
-  <Menu client:load />
+  <LanguageSwitcher client:load currentLang="en" />
+  <Header client:load lang="en" />
+  <Menu client:load lang="en" />
   
   <main id="content" class="site-main">
-    <Hero client:load />
-    <InfoSection client:load />
-    <SurvivalGuide client:load />
-    <GetInvolved client:load />
+    <Hero client:load lang="en" />
+    <InfoSection client:load lang="en" />
+    <SurvivalGuide client:load lang="en" />
+    <GetInvolved client:load lang="en" />
   </main>
   
-  <Footer client:load />
+  <Footer client:load lang="en" />
 </Layout>

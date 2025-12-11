@@ -1,8 +1,14 @@
 import React from 'react';
-import type { SurvivalGuideProps } from '../types';
+import type { SurvivalGuideProps } from '../../types';
+import type { Language as LangType } from '../../i18n';
 
-export const SurvivalGuide: React.FC<SurvivalGuideProps> = ({
-  guideUrl = "https://drive.google.com/file/d/1vd2aHBn61nMJj_PD7GqsoHOPr73e7DNK/view?usp=sharing"
+interface SurvivalGuide2026Props extends SurvivalGuideProps {
+  lang?: LangType;
+}
+
+export const SurvivalGuide: React.FC<SurvivalGuide2026Props> = ({
+  guideUrl = "https://drive.google.com/file/d/1vd2aHBn61nMJj_PD7GqsoHOPr73e7DNK/view?usp=sharing",
+  lang = 'en'
 }) => {
   return (
     <section className="survival-guide-section">

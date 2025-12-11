@@ -2,8 +2,13 @@
 
 import React from 'react';
 import type { BlogCardProps } from '../../types';
+import { useTranslations, getLocalizedPath, type Language } from '../../i18n/utils';
 
-export const BlogCard: React.FC<BlogCardProps> = ({
+interface BlogCardComponentProps extends BlogCardProps {
+  lang?: Language;
+}
+
+export const BlogCard: React.FC<BlogCardComponentProps> = ({
   title,
   slug,
   date,
@@ -12,7 +17,10 @@ export const BlogCard: React.FC<BlogCardProps> = ({
   image,
   excerpt,
   categories,
+  lang = 'en',
 }) => {
+  const t = useTranslations(lang);
+  const blogPostUrl = getLocalizedPath(`/blog/${slug}`, lang);
 
   return (
     <article className="blog-card">
@@ -32,7 +40,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
 
       {image && (
         <div className="blog-card-image">
-          <a href={`/blog/${slug.replace('/index.md', '')}`}>
+          <a href={blogPostUrl}>
             <img src={image} alt={title} loading="lazy" />
           </a>
         </div>
@@ -40,7 +48,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({
 
       <div className="blog-card-content">
         <h2 className="blog-card-title">
-          <a href={`/blog/${slug.replace('/index.md', '')}`}>{title}</a>
+          <a href={blogPostUrl}>{title}</a>
         </h2>
 
         <p className="blog-card-excerpt">{excerpt}</p>
@@ -55,8 +63,8 @@ export const BlogCard: React.FC<BlogCardProps> = ({
           </div>
         )}
 
-        <a href={`/blog/${slug.replace('/index.md', '')}`} className="blog-card-link">
-          Read more →
+        <a href={blogPostUrl} className="blog-card-link">
+          {t('blog.readMore')} →
         </a>
       </div>
     </article>

@@ -5,12 +5,14 @@ import { BlogCard } from './BlogCard';
 import { SearchBar } from './SearchBar';
 import { ErrorBoundary } from '../common/ErrorBoundary';
 import type { BlogPost } from '../../types';
+import type { Language } from '../../i18n';
 
 interface BlogFeedProps {
   posts: BlogPost[];
+  lang?: Language;
 }
 
-export const BlogFeed: React.FC<BlogFeedProps> = ({ posts }) => {
+export const BlogFeed: React.FC<BlogFeedProps> = ({ posts, lang = 'en' }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -44,6 +46,7 @@ export const BlogFeed: React.FC<BlogFeedProps> = ({ posts }) => {
           onCategoryFilter={setSelectedCategory}
           categories={allCategories}
           selectedCategory={selectedCategory}
+          lang={lang}
         />
 
         {filteredPosts.length === 0 ? (
@@ -63,6 +66,7 @@ export const BlogFeed: React.FC<BlogFeedProps> = ({ posts }) => {
                 <BlogCard
                   key={index}
                   {...post}
+                  lang={lang}
                 />
               ))}
             </div>

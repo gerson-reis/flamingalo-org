@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { Header, Hero, InfoSection, SurvivalGuide, GetInvolved, Footer, Menu } from '../../../components/2025';
+import { LanguageSwitcher } from '../../../components/LanguageSwitcher';
+---
+
+<Layout title="Flamingalo 2025 - Burn Portugal">
+  <a class="skip-link" href="#content">Ir para o conteúdo</a>
+  <LanguageSwitcher client:load currentLang="pt" />
+  <Header client:load lang="pt" />
+  <Menu client:load lang="pt" />
+  <main id="content" class="site-main">
+    <Hero client:load lang="pt" />
+    <InfoSection client:load lang="pt" />
+    <SurvivalGuide client:load lang="pt" />
+    <GetInvolved client:load lang="pt" />
+  </main>
+  <Footer client:load lang="pt" />
+</Layout>
+

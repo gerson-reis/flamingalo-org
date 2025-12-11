@@ -1,12 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useTranslations, type Language } from '../../i18n/utils';
 
 interface SearchBarProps {
   onSearch: (query: string) => void;
   onCategoryFilter: (category: string) => void;
   categories: string[];
   selectedCategory: string;
+  lang?: Language;
 }
 
 export const SearchBar: React.FC<SearchBarProps> = ({
@@ -14,8 +16,10 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   onCategoryFilter,
   categories,
   selectedCategory,
+  lang = 'en',
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
+  const t = useTranslations(lang);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -49,7 +53,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         <input
           type="text"
           className="search-input"
-          placeholder="Search posts..."
+          placeholder={t('blog.searchPlaceholder')}
           value={searchQuery}
           onChange={handleSearchChange}
         />
@@ -72,7 +76,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           className={`category-filter ${selectedCategory === 'all' ? 'active' : ''}`}
           onClick={() => handleCategoryClick('all')}
         >
-          All
+          {t('blog.allCategories')}
         </button>
         {categories.map((category, index) => (
           <button

@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Header, Footer, Menu } from '../../components/2026';
+import { BlogFeed } from '../../components/blog';
+import { LanguageSwitcher } from '../../components/LanguageSwitcher';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => {
+  return data.lang === 'pt';
+});
+
+const sortedPosts = allPosts.sort((a, b) => 
+  b.data.date.getTime() - a.data.date.getTime()
+).map(post => ({
+  title: post.data.title,
+  slug: post.slug,
+  date: post.data.date.toLocaleDateString('pt-PT', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }),
+  author: post.data.author,
+  authorImage: post.data.authorImage,
+  image: post.data.image,
+  excerpt: post.data.excerpt,
+  categories: post.data.categories,
+}));
+---
+
+<Layout title="Informações e Notícias - Flamingalo">
+  <a class="skip-link" href="#content">Ir para o conteúdo</a>
+  <LanguageSwitcher client:load currentLang="pt" />
+  <Header client:load lang="pt" />
+  <Menu client:load lang="pt" />
+  <main id="content" class="blog-page">
+    <div class="blog-header">
+      <h1 class="blog-title">Informações e Notícias</h1>
+      <p class="blog-subtitle">Fique atualizado com as últimas novidades do Flamingalo.</p>
+    </div>
+    <BlogFeed client:load posts={sortedPosts} lang="pt" />
+  </main>
+  <Footer client:load lang="pt" />
+</Layout>
+

@@ -1,0 +1,76 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Header, Footer, Menu } from '../../components/2026';
+import { LanguageSwitcher } from '../../components/LanguageSwitcher';
+---
+
+<Layout title="Guia de Colaboração - Flamingalo">
+  <a class="skip-link" href="#content">Ir para o conteúdo</a>
+  
+  <LanguageSwitcher client:load currentLang="pt" />
+  <Header client:load lang="pt" />
+  <Menu client:load lang="pt" />
+  
+  <main id="content" style="padding-top: 100px; min-height: 80vh;">
+    <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px;">
+      <h1 style="font-size: 3rem; margin-bottom: 20px; text-align: center;">Guia de Colaboração</h1>
+      <p style="font-size: 1.2rem; color: #666; margin-bottom: 40px; text-align: center;">
+        Aprenda como contribuir e colaborar com a comunidade Flamingalo.
+      </p>
+      
+      <div style="text-align: left; line-height: 1.8; color: #333;">
+        <h2 style="font-size: 2rem; margin-top: 40px; margin-bottom: 20px; color: #e74c76;">🤝 Como Contribuir</h2>
+        <p style="margin-bottom: 20px;">
+          Flamingalo é construído pela comunidade, para a comunidade. Aceitamos contribuições de todos os tipos:
+        </p>
+        <ul style="margin-left: 20px; margin-bottom: 30px;">
+          <li style="margin-bottom: 10px;">🎨 Instalações artísticas e performances</li>
+          <li style="margin-bottom: 10px;">🎪 Theme camps e workshops</li>
+          <li style="margin-bottom: 10px;">🛠️ Suporte de infraestrutura e logística</li>
+          <li style="margin-bottom: 10px;">💻 Desenvolvimento de website e tecnologia</li>
+          <li style="margin-bottom: 10px;">📢 Marketing e divulgação comunitária</li>
+        </ul>
+
+        <h2 style="font-size: 2rem; margin-top: 40px; margin-bottom: 20px; color: #e74c76;">📚 Como Começar</h2>
+        <p style="margin-bottom: 20px;">
+          Para começar a colaborar:
+        </p>
+        <ol style="margin-left: 20px; margin-bottom: 30px;">
+          <li style="margin-bottom: 10px;">Entre no nosso <a href="https://t.me/+8rF8c-tPM9c5MGU0" style="color: #e74c76; text-decoration: underline;">grupo do Telegram</a></li>
+          <li style="margin-bottom: 10px;">Leia o <a href="https://drive.google.com/file/d/1vd2aHBn61nMJj_PD7GqsoHOPr73e7DNK/view?usp=sharing" style="color: #e74c76; text-decoration: underline;">Guia de Sobrevivência</a></li>
+          <li style="margin-bottom: 10px;">Se apresente e compartilhe suas ideias</li>
+          <li style="margin-bottom: 10px;">Conecte-se com outros colaboradores</li>
+        </ol>
+
+        <h2 style="font-size: 2rem; margin-top: 40px; margin-bottom: 20px; color: #e74c76;">🔥 Os 10 Princípios</h2>
+        <p style="margin-bottom: 20px;">
+          Todas as colaborações no Flamingalo são guiadas pelos 10 Princípios do Burning Man:
+        </p>
+        <ul style="margin-left: 20px; margin-bottom: 30px;">
+          <li style="margin-bottom: 10px;">Inclusão Radical</li>
+          <li style="margin-bottom: 10px;">Presentear</li>
+          <li style="margin-bottom: 10px;">Descomodificação</li>
+          <li style="margin-bottom: 10px;">Autossuficiência Radical</li>
+          <li style="margin-bottom: 10px;">Autoexpressão Radical</li>
+          <li style="margin-bottom: 10px;">Esforço Comunitário</li>
+          <li style="margin-bottom: 10px;">Responsabilidade Cívica</li>
+          <li style="margin-bottom: 10px;">Não Deixe Rastros</li>
+          <li style="margin-bottom: 10px;">Participação</li>
+          <li style="margin-bottom: 10px;">Imediatismo</li>
+        </ul>
+
+        <div style="text-align: center; margin-top: 50px;">
+          <a href="/pt" style="display: inline-block; background: #e74c76; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px; margin-right: 10px;">
+            Voltar ao Início
+          </a>
+          <a href="/pt/blog" style="display: inline-block; background: #333; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 16px;">
+            Ler Blog
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer client:load lang="pt" />
+</Layout>
+

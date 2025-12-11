@@ -41,6 +41,14 @@
             "type": "string"
           }
         },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "en",
+            "pt"
+          ],
+          "default": "en"
+        },
         "$schema": {
           "type": "string"
         }
@@ -50,6 +58,7 @@
         "date",
         "author",
         "authorImage",
+        "image",
         "excerpt",
         "categories"
       ],

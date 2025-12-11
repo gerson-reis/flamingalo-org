@@ -1,13 +1,25 @@
 import React from 'react';
-import type { HeroProps } from '../types';
+import type { HeroProps } from '../../types';
+import { useTranslations } from '../../i18n/utils';
+import type { Language as LangType } from '../../i18n';
 
-export const Hero: React.FC<HeroProps> = ({
+interface Hero2026Props extends HeroProps {
+  lang?: LangType;
+}
+
+export const Hero: React.FC<Hero2026Props> = ({
   title = "Mundo Bizarro",
-  date = "April 30 – May 5",
-  location = "Alentejo, Portugal",
-  ctaText = "Get Flicket",
-  ctaLink = "https://docs.google.com/forms/d/e/1FAIpQLScs8aI-l4wNJsx-DzniUFuuZE5TOFTVsRtmzK8fiW-8_zx-qw/viewform?usp=header"
+  date,
+  location,
+  ctaText,
+  ctaLink = "https://docs.google.com/forms/d/e/1FAIpQLSdAFwvftKjstbdiJIUSDXiUs28g-QbH1EG5ldhXM1W4k78lig/viewform",
+  lang = 'en'
 }) => {
+  const t = useTranslations(lang);
+  
+  const finalDate = date || "May 27 – June 1";
+  const finalLocation = location || t('hero.location');
+  const finalCtaText = ctaText || t('hero.getTickets');
   return (
     <div className="hero">
       <h1 className="mundobizarro">
@@ -20,8 +32,8 @@ export const Hero: React.FC<HeroProps> = ({
         />
       </h1>
       <div className="hero-inner">
-        <h4><span>{date}</span></h4>
-        <h5 className="subtitle"><span>{location}</span></h5>
+        <h4><span>{finalDate}</span></h4>
+        <h5 className="subtitle"><span>{finalLocation}</span></h5>
         <div className="highlight">
           <div className="highlight-inner">
             <p className="buttons">
@@ -31,7 +43,7 @@ export const Hero: React.FC<HeroProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="text">{ctaText}</span>
+                <span className="text">{finalCtaText}</span>
               </a>
             </p>
           </div>

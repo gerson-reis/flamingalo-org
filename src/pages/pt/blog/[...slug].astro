@@ -1,0 +1,96 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { Header, Footer, Menu } from '../../../components/2026';
+import { LanguageSwitcher } from '../../../components/LanguageSwitcher';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => data.lang === 'pt');
+  return posts.map(post => {
+    return {
+      params: { slug: post.slug },
+      props: { post },
+    };
+  });
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const formattedDate = post.data.date.toLocaleDateString('pt-PT', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<Layout title={`${post.data.title} - Flamingalo Blog`}>
+  <a class="skip-link" href="#content">Ir para o conteúdo</a>
+  
+  <LanguageSwitcher client:load currentLang="pt" />
+  <Header client:load lang="pt" />
+  <Menu client:load lang="pt" />
+  
+  <main id="content" class="blog-post-page">
+    <article class="blog-post">
+      <header class="blog-post-header">
+        {post.data.image && (
+          <div class="blog-post-featured-image">
+            <img src={post.data.image} alt={post.data.title} />
+          </div>
+        )}
+        
+        <div class="blog-post-header-content">
+          <div class="blog-post-meta">
+            <div class="blog-post-author-info">
+              {post.data.authorImage && (
+                <img 
+                  src={post.data.authorImage} 
+                  alt={post.data.author}
+                  class="blog-post-author-avatar"
+                />
+              )}
+              <div>
+                <span class="blog-post-author-name">{post.data.author}</span>
+                <time class="blog-post-date" datetime={post.data.date.toISOString()}>
+                  {formattedDate}
+                </time>
+              </div>
+            </div>
+            
+            {post.data.categories && post.data.categories.length > 0 && (
+              <div class="blog-post-categories">
+                {post.data.categories.map((category) => (
+                  <span class="blog-post-category-tag">#{category}</span>
+                ))}
+              </div>
+            )}
+          </div>
+          
+          <h1 class="blog-post-title">{post.data.title}</h1>
+          
+          {post.data.excerpt && (
+            <p class="blog-post-excerpt">{post.data.excerpt}</p>
+          )}
+        </div>
+      </header>
+      
+      <div class="blog-post-content">
+        <Content />
+      </div>
+      
+      <footer class="blog-post-footer">
+        <a href="/pt/blog" class="blog-post-back-link">
+          ← Voltar para todos os posts
+        </a>
+      </footer>
+    </article>
+  </main>
+  
+  <Footer client:load lang="pt" />
+</Layout>
+
