@@ -80,6 +80,13 @@ export const ui = {
     'blog.allCategories': 'All Categories',
     'blog.resultsCount': 'results',
     'blog.noResults': 'No posts found',
+    
+    'info2025.card1': 'FLAMINGALO is set to soar once again! Our Burning Man-inspired event returns to the heart of Portugal, Alentejo, from',
+    'info2025.card2': 'Just a 90-minute journey from Lisbon, Alentejo is the perfect nest for our gathering of vibrant flaminglers.',
+    'info2025.card3.part1': 'With the',
+    'info2025.card3.link': '10 principles',
+    'info2025.card3.part2': 'of Burning Man guiding us, we aim to unite, respect, and revel together. Get ready to reignite the spirit of creativity, community, and celebrate with us!',
+    'info2025.card4': 'So, fasten your feathers and prepare to embrace the flaming spirit of FLAMINGALO for an extraordinary ascent!',
   },
   pt: {
     'nav.blog': 'Informações e Notícias',
@@ -153,6 +160,13 @@ export const ui = {
     'blog.allCategories': 'Todas as Categorias',
     'blog.resultsCount': 'resultados',
     'blog.noResults': 'Nenhum post encontrado',
+    
+    'info2025.card1': 'FLAMINGALO está pronto para voar novamente! Nosso evento inspirado no Burning Man retorna ao coração de Portugal, Alentejo, de',
+    'info2025.card2': 'A apenas 90 minutos de Lisboa, o Alentejo é o ninho perfeito para nossa reunião de flaminglers vibrantes.',
+    'info2025.card3.part1': 'Com os',
+    'info2025.card3.link': '10 princípios',
+    'info2025.card3.part2': 'do Burning Man nos guiando, buscamos unir, respeitar e celebrar juntos. Prepare-se para reacender o espírito de criatividade, comunidade e celebrar conosco!',
+    'info2025.card4': 'Então, ajuste suas penas e prepare-se para abraçar o espírito flamejante do FLAMINGALO para uma ascensão extraordinária!',
   },
 } as const;
 

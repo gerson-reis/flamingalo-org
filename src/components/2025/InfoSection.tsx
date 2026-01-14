@@ -1,44 +1,47 @@
 import React from 'react';
 import { InfoCard } from './InfoCard';
 import type { Language as LangType } from '../../i18n';
+import { useTranslations } from '../../i18n/utils';
 
 interface InfoSectionProps {
   lang?: LangType;
 }
 
 export const InfoSection: React.FC<InfoSectionProps> = ({ lang = 'en' }) => {
+  const t = useTranslations(lang);
+  
   return (
     <section className="info-section">
       <div className="info-grid">
         <InfoCard emoji="✨">
           <p>
-            FLAMINGALO is set to soar once again! Our Burning Man-inspired event returns to the heart of Portugal, Alentejo, from <strong>April 30 – May 5, 2025</strong>.
+            {t('info2025.card1')} <strong>April 30 – May 5, 2025</strong>.
           </p>
         </InfoCard>
 
         <InfoCard emoji="🗺">
           <p>
-            Just a 90-minute journey from Lisbon, Alentejo is the perfect nest for our gathering of vibrant flaminglers.
+            {t('info2025.card2')}
           </p>
         </InfoCard>
 
         <InfoCard emoji="🪩">
           <p>
-            With the{' '}
+            {t('info2025.card3.part1')}{' '}
             <a 
               href="https://burningman.org/about/10-principles/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              10 principles
+              {t('info2025.card3.link')}
             </a>
-            {' '}of Burning Man guiding us, we aim to unite, respect, and revel together. Get ready to reignite the spirit of creativity, community, and celebrate with us!
+            {' '}{t('info2025.card3.part2')}
           </p>
         </InfoCard>
 
         <InfoCard emoji="🦩🐓">
           <p>
-            So, fasten your feathers and prepare to embrace the flaming spirit of FLAMINGALO for an extraordinary ascent!
+            {t('info2025.card4')}
           </p>
         </InfoCard>
       </div>
