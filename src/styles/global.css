@@ -299,7 +299,7 @@ body {
 .hero {
   height: 90vh;
   min-height: 580px;
-  background: url('/cabaret-pano.png') repeat-x;
+  background: url('/cabaret-pano.jpg') repeat-x;
   animation: scroll-banner 300s infinite linear;
   background-size: auto 100%;
   backface-visibility: hidden;
