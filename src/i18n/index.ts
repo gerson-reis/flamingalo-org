@@ -87,6 +87,17 @@ export const ui = {
     'info2025.card3.link': '10 principles',
     'info2025.card3.part2': 'of Burning Man guiding us, we aim to unite, respect, and revel together. Get ready to reignite the spirit of creativity, community, and celebrate with us!',
     'info2025.card4': 'So, fasten your feathers and prepare to embrace the flaming spirit of FLAMINGALO for an extraordinary ascent!',
+    
+    'survivalGuide.title': 'Survival Guide',
+    'survivalGuide.paragraph1': 'Flamingalo is a co-created event. Nothing exists unless we come together and make it happen! The core organization has already found the land, ordered toilets, and are setting up basic support structures like First Aid and Welfare. But all the rest is up to you!',
+    'survivalGuide.paragraph2': 'Learn how to survive and thrive by downloading the Survival Guide below, it tells you all the information you need to enjoy Flamingalo to the fullest.',
+    'survivalGuide.button2025': 'Survival Guide 2025',
+    'survivalGuide.button2026': 'Survival Guide 2026',
+    
+    'getInvolved.title': 'Get Involved',
+    'getInvolved.paragraph1': 'Join us to hatch this wonderling of co-creation from a nest of fire and see it take flight.',
+    'getInvolved.paragraph2.2025': 'To get involved with making Flamingalo 2025 happen, join our Telegram and participate in the bi-weekly meetings.',
+    'getInvolved.paragraph2.2026': 'To get involved with making Flamingalo 2026 happen, join our Telegram and participate in the bi-weekly meetings.',
   },
   pt: {
     'nav.blog': 'Informações e Notícias',
@@ -167,6 +178,17 @@ export const ui = {
     'info2025.card3.link': '10 princípios',
     'info2025.card3.part2': 'do Burning Man nos guiando, buscamos unir, respeitar e celebrar juntos. Prepare-se para reacender o espírito de criatividade, comunidade e celebrar conosco!',
     'info2025.card4': 'Então, ajuste suas penas e prepare-se para abraçar o espírito flamejante do FLAMINGALO para uma ascensão extraordinária!',
+    
+    'survivalGuide.title': 'Guia de Sobrevivência',
+    'survivalGuide.paragraph1': 'Flamingalo é um evento co-criado. Nada existe a menos que nos unamos e façamos acontecer! A organização central já encontrou o terreno, encomendou banheiros e está configurando estruturas básicas de suporte como Primeiros Socorros e Bem-estar. Mas todo o resto depende de você!',
+    'survivalGuide.paragraph2': 'Aprenda como sobreviver e prosperar baixando o Guia de Sobrevivência abaixo, ele contém todas as informações que você precisa para aproveitar o Flamingalo ao máximo.',
+    'survivalGuide.button2025': 'Guia de Sobrevivência 2025',
+    'survivalGuide.button2026': 'Guia de Sobrevivência 2026',
+    
+    'getInvolved.title': 'Participe',
+    'getInvolved.paragraph1': 'Junte-se a nós para eclodir esta maravilha de co-criação de um ninho de fogo e vê-la alçar voo.',
+    'getInvolved.paragraph2.2025': 'Para se envolver em fazer o Flamingalo 2025 acontecer, entre no nosso Telegram e participe das reuniões quinzenais.',
+    'getInvolved.paragraph2.2026': 'Para se envolver em fazer o Flamingalo 2026 acontecer, entre no nosso Telegram e participe das reuniões quinzenais.',
   },
 } as const;
 
