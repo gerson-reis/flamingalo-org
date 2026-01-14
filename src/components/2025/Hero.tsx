@@ -21,7 +21,7 @@ export const Hero: React.FC<Hero2026Props> = ({
   const finalLocation = location || t('hero.location');
   const finalCtaText = ctaText || t('hero.getTickets');
   return (
-    <div className="hero">
+    <div className="hero hero-2025">
       <h1 className="mundobizarro">
         <img 
           src="/mundo-bizarro-type-pink.png" 
