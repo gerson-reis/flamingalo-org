@@ -22,15 +22,15 @@ export const Hero: React.FC<Hero2026Props> = ({
   const finalCtaText = ctaText || t('hero.getTickets');
   return (
     <div className="hero hero-2026">
-      {/* <h1 className="mundobizarro">
+      <h1 className="mundobizarro">
         <img 
-          src="/mundo-bizarro-type-pink.png" 
+          src="/cabaret-chaotico-2026-title.png" 
           alt={title}
           width="500"
           height="140"
           loading="eager"
         />
-      </h1> */}
+      </h1>
       <div className="hero-inner">
         <h4><span>{finalDate}</span></h4>
         <h5 className="subtitle"><span>{finalLocation}</span></h5>
