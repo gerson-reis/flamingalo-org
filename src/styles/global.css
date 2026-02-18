@@ -353,8 +353,13 @@ body {
   z-index: 1;
   mix-blend-mode: exclusion;
   position: absolute;
-  top: 30vh;
-  bottom: 20vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero h1.mundobizarro img {
