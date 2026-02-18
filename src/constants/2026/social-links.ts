@@ -2,9 +2,9 @@ import type { SocialLink } from '../types';
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    title: "Flamingalo 2025",
-    description: "Join the Flamingler's Hub Telegram group – the jumping off point for all things Flamingalo 2025!",
-    buttonText: "Flamingalo 2025",
+    title: "Flamingalo 2026",
+    description: "Join the Flamingler's Hub Telegram group – the jumping off point for all things Flamingalo 2026!",
+    buttonText: "Flamingalo 2026",
     buttonUrl: "https://t.me/+8rF8c-tPM9c5MGU0"
   },
   {
