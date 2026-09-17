@@ -97,7 +97,7 @@ export const ui = {
     'getInvolved.title': 'Get Involved',
     'getInvolved.paragraph1': 'Join us to hatch this wonderling of co-creation from a nest of fire and see it take flight.',
     'getInvolved.paragraph2.2025': 'To get involved with making Flamingalo 2025 happen, join our Telegram and participate in the bi-weekly meetings.',
-    'getInvolved.paragraph2.2026': 'To get involved with making Flamingalo 2026 happen, join our Telegram and participate in the bi-weekly meetings.',
+    'getInvolved.paragraph2.2026': 'To get involved with making Flamingalo 2027 happen, join our Telegram and participate in the bi-weekly meetings.',
   },
   pt: {
     'nav.blog': 'Informações e Notícias',
@@ -188,7 +188,7 @@ export const ui = {
     'getInvolved.title': 'Participe',
     'getInvolved.paragraph1': 'Junte-se a nós para eclodir esta maravilha de co-criação de um ninho de fogo e vê-la alçar voo.',
     'getInvolved.paragraph2.2025': 'Para se envolver em fazer o Flamingalo 2025 acontecer, entre no nosso Telegram e participe das reuniões quinzenais.',
-    'getInvolved.paragraph2.2026': 'Para se envolver em fazer o Flamingalo 2026 acontecer, entre no nosso Telegram e participe das reuniões quinzenais.',
+    'getInvolved.paragraph2.2026': 'Para se envolver em fazer o Flamingalo 2027 acontecer, entre no nosso Telegram e participe das reuniões quinzenais.',
   },
 } as const;
 
