@@ -17,7 +17,7 @@ export const Hero: React.FC<Hero2026Props> = ({
 }) => {
   const t = useTranslations(lang);
   
-  const finalDate = date || "May 27 – 31";
+  const finalDate = date || "May 12 – 17";
   const finalLocation = location || t('hero.location');
   const finalCtaText = ctaText || t('hero.getTickets');
   return (
