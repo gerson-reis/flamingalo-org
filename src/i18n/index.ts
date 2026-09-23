@@ -16,7 +16,6 @@ export const ui = {
     
     'hero.title': 'Cabaret Chaotica',
     'hero.location': 'Alentejo, Portugal',
-    'hero.getTickets': 'Get Flickets',
     
     'info.title': 'What is Flamingalo?',
     'info.description': 'Flamingalo is a regional burn inspired by the 10 Principles of Burning Man. For 5 days, we create a temporary city dedicated to art, self-expression, and community in the heart of Alentejo, Portugal.',
@@ -107,7 +106,6 @@ export const ui = {
     
     'hero.title': 'Cabaret Chaotica',
     'hero.location': 'Alentejo, Portugal',
-    'hero.getTickets': 'Garantir Ingresso',
     
     'info.title': 'O que é o Flamingalo?',
     'info.description': 'Flamingalo é um burn regional inspirado nos 10 Princípios do Burning Man. Por 5 dias, criamos uma cidade temporária dedicada à arte, autoexpressão e comunidade no coração do Alentejo, Portugal.',

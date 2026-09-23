@@ -11,8 +11,6 @@ export interface HeroProps {
   title?: string;
   date?: string;
   location?: string;
-  ctaText?: string;
-  ctaLink?: string;
 }
 
 export interface HeaderProps {

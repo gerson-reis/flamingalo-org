@@ -65,8 +65,6 @@ Your flicket gives you access to:
 
 We have a limited number of early bird flickets available at a special discount. Once they're gone, prices will increase for the next tier.
 
-👉 **[Get Your Flicket Now](https://docs.google.com/forms/d/e/1FAIpQLSdAFwvftKjstbdiJIUSDXiUs28g-QbH1EG5ldhXM1W4k78lig/viewform)**
-
 Don't wait – join the flock early and help us make Flamingalo 2026 the most incredible edition yet!
 
 ## 🤔 First Time at Flamingalo?

@@ -11,15 +11,12 @@ export const Hero: React.FC<Hero2026Props> = ({
   title = "Mundo Bizarro",
   date,
   location,
-  ctaText,
-  ctaLink = "https://docs.google.com/forms/d/e/1FAIpQLSdAFwvftKjstbdiJIUSDXiUs28g-QbH1EG5ldhXM1W4k78lig/viewform",
   lang = 'en'
 }) => {
   const t = useTranslations(lang);
   
   const finalDate = date || "May 27 – June 1";
   const finalLocation = location || t('hero.location');
-  const finalCtaText = ctaText || t('hero.getTickets');
   return (
     <div className="hero hero-2025">
       <h1 className="mundobizarro">
@@ -34,20 +31,6 @@ export const Hero: React.FC<Hero2026Props> = ({
       <div className="hero-inner">
         <h4><span>{finalDate}</span></h4>
         <h5 className="subtitle"><span>{finalLocation}</span></h5>
-        <div className="highlight">
-          <div className="highlight-inner">
-            <p className="buttons">
-              <a 
-                href={ctaLink}
-                className="button button--pink button--large"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="text">{finalCtaText}</span>
-              </a>
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );

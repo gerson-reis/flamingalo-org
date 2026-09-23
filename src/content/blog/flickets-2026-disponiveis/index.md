@@ -65,8 +65,6 @@ Seu flicket te dá acesso a:
 
 Temos um número limitado de flickets early bird disponíveis com desconto especial. Quando acabarem, os preços aumentarão para o próximo nível.
 
-👉 **[Garanta Seu Flicket Agora](https://docs.google.com/forms/d/e/1FAIpQLSdAFwvftKjstbdiJIUSDXiUs28g-QbH1EG5ldhXM1W4k78lig/viewform)**
-
 Não espere – junte-se ao bando cedo e ajude-nos a fazer do Flamingalo 2026 a edição mais incrível de todas!
 
 ## 🤔 Primeira Vez no Flamingalo?
