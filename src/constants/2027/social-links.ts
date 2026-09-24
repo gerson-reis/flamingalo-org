@@ -2,9 +2,9 @@ import type { SocialLink } from '../types';
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    title: "Flamingalo 2026",
-    description: "Join the Flamingler's Hub Telegram group – the jumping off point for all things Flamingalo 2026!",
-    buttonText: "Flamingalo 2026",
+    title: "Flamingalo 2027",
+    description: "Join the Flamingler's Hub Telegram group – the jumping off point for all things Flamingalo 2027!",
+    buttonText: "Flamingalo 2027",
     buttonUrl: "https://t.me/+8rF8c-tPM9c5MGU0"
   },
   {
@@ -33,20 +33,11 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     title: "FlamingalORG",
-    description: "Join the org and help make the event possible! We're currently looking for event time co-leads and people interested in making Flamingalo 2026 happen. Ask about joining the ORG in the general chat and we'll be in touch!",
+    description: "Join the org and help make the event possible! We're currently looking for event time co-leads and people interested in making Flamingalo 2027 happen. Ask about joining the ORG in the general chat and we'll be in touch!",
     buttonText: "Get Involved",
     buttonUrl: "https://t.me/+8rF8c-tPM9c5MGU0"
   }
 ];
-
-export const EVENT_INFO = {
-  title: "Mundo Bizarro",
-  date: "April 30 – May 5",
-  location: "Alentejo, Portugal",
-  ctaText: "Get Flicket",
-  ctaLink: "https://docs.google.com/forms/d/e/1FAIpQLScs8aI-l4wNJsx-DzniUFuuZE5TOFTVsRtmzK8fiW-8_zx-qw/viewform?usp=header",
-  survivalGuideUrl: "https://drive.google.com/file/d/1vd2aHBn61nMJj_PD7GqsoHOPr73e7DNK/view?usp=sharing"
-};
 
 export const SITE_INFO = {
   logoUrl: "/flamingalo-logo-text-2025-v1.png",
