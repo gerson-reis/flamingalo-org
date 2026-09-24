@@ -10,11 +10,15 @@ Este projeto utiliza uma arquitetura moderna baseada em Astro + React, com foco 
 src/
 ├── components/       # Componentes React reutilizáveis
 ├── constants/        # Constantes e configurações
+├── content/          # Posts do blog (Markdown)
+├── i18n/             # Textos em inglês e português
 ├── layouts/          # Layouts Astro
 ├── pages/           # Páginas da aplicação
 ├── styles/          # Estilos globais
 └── types/           # Tipos TypeScript compartilhados
 ```
+
+`components/` e `constants/` são organizados por edição (`2025/`, `2026/`, `2027/`); ver [ESTRUTURA-ANOS.md](./ESTRUTURA-ANOS.md).
 
 ## 🔄 Fluxo de Dados
 
@@ -251,6 +255,10 @@ test('homepage loads', async ({ page }) => {
 
 ## 🚀 Deploy
 
+### Deploy atual
+
+O flamingalo.org é publicado no **Cloudflare Pages** pela integração com o GitHub: cada push em `main` gera o build e vai ao ar em poucos minutos, e cada Pull Request recebe uma URL de preview. O check `Workers Builds: flamingalo` só compila `main` e por isso falha nas branches de PR; é esperado e não bloqueia o merge.
+
 ### Build Process
 
 ```bash
@@ -308,7 +316,7 @@ jobs:
 ### Curto Prazo
 
 - [ ] Adicionar testes unitários
-- [ ] Implementar i18n (português/inglês)
+- [x] Implementar i18n (português/inglês)
 - [ ] Adicionar loading states
 - [ ] Implementar error boundaries
 

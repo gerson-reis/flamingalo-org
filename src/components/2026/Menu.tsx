@@ -26,6 +26,10 @@ export const Menu: React.FC<MenuProps> = ({ lang = 'en' }) => {
       href: getLocalizedPath('/collaboration-guide', lang)
     },
     {
+      label: t('nav.2027'),
+      href: getLocalizedPath('/2027', lang)
+    },
+    {
       label: t('nav.2026'),
       href: getLocalizedPath('/2026', lang)
     },

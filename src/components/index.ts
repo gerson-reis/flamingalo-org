@@ -4,4 +4,5 @@ export * from './2025';
 // Named exports for specific years
 export * as Components2025 from './2025';
 export * as Components2026 from './2026';
+export * as Components2027 from './2027';
 

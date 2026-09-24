@@ -11,6 +11,7 @@ export const ui = {
   en: {
     'nav.blog': 'Information and News',
     'nav.guide': 'Collaboration Guide',
+    'nav.2027': 'Flamingalo 2027',
     'nav.2026': 'Flamingalo 2026',
     'nav.2025': 'Flamingalo 2025',
     
@@ -92,15 +93,19 @@ export const ui = {
     'survivalGuide.paragraph2': 'Learn how to survive and thrive by downloading the Survival Guide below, it tells you all the information you need to enjoy Flamingalo to the fullest.',
     'survivalGuide.button2025': 'Survival Guide 2025',
     'survivalGuide.button2026': 'Survival Guide 2026',
+    'survivalGuide.button2027': 'Survival Guide 2027',
+    'survivalGuide.comingSoon2027': 'The 2027 guide is coming soon – meanwhile, this button opens the 2026 guide.',
     
     'getInvolved.title': 'Get Involved',
     'getInvolved.paragraph1': 'Join us to hatch this wonderling of co-creation from a nest of fire and see it take flight.',
     'getInvolved.paragraph2.2025': 'To get involved with making Flamingalo 2025 happen, join our Telegram and participate in the bi-weekly meetings.',
-    'getInvolved.paragraph2.2026': 'To get involved with making Flamingalo 2027 happen, join our Telegram and participate in the bi-weekly meetings.',
+    'getInvolved.paragraph2.2026': 'To get involved with making Flamingalo 2026 happen, join our Telegram and participate in the bi-weekly meetings.',
+    'getInvolved.paragraph2.2027': 'To get involved with making Flamingalo 2027 happen, join our Telegram and participate in the bi-weekly meetings.',
   },
   pt: {
     'nav.blog': 'Informações e Notícias',
     'nav.guide': 'Guia de Colaboração',
+    'nav.2027': 'Flamingalo 2027',
     'nav.2026': 'Flamingalo 2026',
     'nav.2025': 'Flamingalo 2025',
     
@@ -182,11 +187,14 @@ export const ui = {
     'survivalGuide.paragraph2': 'Aprenda como sobreviver e prosperar baixando o Guia de Sobrevivência abaixo, ele contém todas as informações que você precisa para aproveitar o Flamingalo ao máximo.',
     'survivalGuide.button2025': 'Guia de Sobrevivência 2025',
     'survivalGuide.button2026': 'Guia de Sobrevivência 2026',
+    'survivalGuide.button2027': 'Guia de Sobrevivência 2027',
+    'survivalGuide.comingSoon2027': 'O guia de 2027 chega em breve – enquanto isso, este botão abre o guia de 2026.',
     
     'getInvolved.title': 'Participe',
     'getInvolved.paragraph1': 'Junte-se a nós para eclodir esta maravilha de co-criação de um ninho de fogo e vê-la alçar voo.',
     'getInvolved.paragraph2.2025': 'Para se envolver em fazer o Flamingalo 2025 acontecer, entre no nosso Telegram e participe das reuniões quinzenais.',
-    'getInvolved.paragraph2.2026': 'Para se envolver em fazer o Flamingalo 2027 acontecer, entre no nosso Telegram e participe das reuniões quinzenais.',
+    'getInvolved.paragraph2.2026': 'Para se envolver em fazer o Flamingalo 2026 acontecer, entre no nosso Telegram e participe das reuniões quinzenais.',
+    'getInvolved.paragraph2.2027': 'Para se envolver em fazer o Flamingalo 2027 acontecer, entre no nosso Telegram e participe das reuniões quinzenais.',
   },
 } as const;
 

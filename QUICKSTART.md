@@ -19,6 +19,18 @@ cd flamingalo
 npm install
 ```
 
+> **Windows:** the repo contains an archived copy of the old WordPress site (`flamingalo.org/`) whose filenames contain `?`, which Windows can't create, so a plain `git clone` fails at checkout. Clone without that folder instead:
+>
+> ```bash
+> git clone --no-checkout <repository-url> flamingalo && cd flamingalo
+> git config core.protectNTFS false
+> git sparse-checkout set --cone src public backup
+> git checkout main
+> npm ci
+> ```
+>
+> The sparse checkout also leaves out the committed `node_modules/`, which `npm ci` rebuilds. Run `npm ci` again after switching branches.
+
 ## Development
 
 ```bash
@@ -36,19 +48,18 @@ The server will automatically reload when you make changes to files.
 ```
 flamingalo/
 ├── src/
-│   ├── components/      # React components
-│   │   ├── Header.tsx
-│   │   ├── Hero.tsx
-│   │   ├── InfoSection.tsx
-│   │   ├── SurvivalGuide.tsx
-│   │   ├── GetInvolved.tsx
-│   │   └── Footer.tsx
-│   ├── constants/       # Constants
-│   ├── layouts/         # Astro layouts
-│   ├── pages/          # Pages
-│   ├── styles/         # Global styles
-│   └── types/          # TypeScript types
-└── public/             # Static files
+│   ├── components/
+│   │   ├── 2025/ 2026/ 2027/   # One folder per edition: Header, Hero, InfoSection,
+│   │   │                       #   SurvivalGuide, GetInvolved, Footer, Menu, ...
+│   │   └── blog/               # Blog components
+│   ├── constants/{year}/       # Per-edition social links
+│   ├── content/blog/           # Blog posts (Markdown)
+│   ├── i18n/                   # English and Portuguese strings
+│   ├── layouts/                # Astro layouts
+│   ├── pages/                  # /, /2025, /2026, /2027, blog, guide + pt/ twins
+│   ├── styles/                 # Global styles
+│   └── types/                  # TypeScript types
+└── public/                     # Static files
 ```
 
 ## Main Commands
@@ -69,22 +80,18 @@ npm run astro        # Access Astro commands
 
 ## Editing Content
 
-### Event Information
+### Event Dates
 
-Edit `src/constants/social-links.ts`:
+Each edition keeps its dates in its own components. The current edition is 2027:
 
-```typescript
-export const EVENT_INFO = {
-  title: "Mundo Bizarro",
-  date: "April 30 – May 5",
-  location: "Alentejo, Portugal",
-  // ...
-};
-```
+- **Hero date**: `src/components/2027/Hero.tsx` (`finalDate`)
+- **Intro card date**: `src/components/2027/InfoSection.tsx` (first card)
+
+Only edit the current year's folder, because the older folders power the `/2025` and `/2026` archive pages. Text shown in both languages lives in `src/i18n/index.ts` (`en` and `pt` blocks). `EVENT_INFO` in the 2025/2026 constants isn't read by any component, so editing it changes nothing.
 
 ### Social Links
 
-Edit `src/constants/social-links.ts`:
+Edit `src/constants/2027/social-links.ts` (shared by the English and Portuguese pages):
 
 ```typescript
 export const SOCIAL_LINKS: SocialLink[] = [
@@ -108,9 +115,9 @@ export const SOCIAL_LINKS: SocialLink[] = [
 1. Create the component file:
 
 ```typescript
-// src/components/MyComponent.tsx
+// src/components/2027/MyComponent.tsx
 import React from 'react';
-import type { MyComponentProps } from '../types';
+import type { MyComponentProps } from '../../types';
 
 export const MyComponent: React.FC<MyComponentProps> = ({ prop }) => {
   return <div>{prop}</div>;
@@ -126,10 +133,10 @@ export interface MyComponentProps {
 }
 ```
 
-3. Export in index:
+3. Export it from the edition's index:
 
 ```typescript
-// src/components/index.ts
+// src/components/2027/index.ts
 export { MyComponent } from './MyComponent';
 ```
 
@@ -138,7 +145,7 @@ export { MyComponent } from './MyComponent';
 ```astro
 ---
 // src/pages/index.astro
-import { MyComponent } from '../components';
+import { MyComponent } from '../components/2027';
 ---
 
 <MyComponent client:load prop="value" />
@@ -186,6 +193,8 @@ Edit `src/styles/global.css`:
 Astro automatically optimizes images during build.
 
 ## Deployment
+
+flamingalo.org deploys automatically from `main` through Cloudflare Pages (see [README.md](./README.md)), so the live site needs none of the commands below. They're alternatives for other hosts.
 
 ### Vercel (Recommended)
 

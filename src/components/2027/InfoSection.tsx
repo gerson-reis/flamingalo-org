@@ -15,7 +15,7 @@ export const InfoSection: React.FC<InfoSectionProps> = ({ lang = 'en' }) => {
       <div className="info-grid">
         <InfoCard emoji="✨">
           <p>
-            {t('info2025.card1')} <strong>May 27 – 31, 2026</strong>.
+            {t('info2025.card1')} <strong>May 12 – 17, 2027</strong>.
           </p>
         </InfoCard>
 

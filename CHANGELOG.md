@@ -1,5 +1,29 @@
 # Changelog - Flamingalo Project
 
+## 2026-09-24 – Flamingalo 2027 edition
+
+### ✨ Added
+- Added `src/components/2027/`, `src/constants/2027/` and the `/2027` + `/pt/2027` pages, following `ESTRUTURA-ANOS.md`
+- Homepage (`/`, `/pt/`) and the blog and collaboration-guide pages now use the 2027 components
+- Menus on every edition link to Flamingalo 2027, 2026 and 2025
+- Hero dates now include the year (e.g. "May 12 – 17, 2027")
+- The 2027 hero no longer uses the 2026 Cabaret Chaotica artwork: it has a flat brand-pink background, a "Flamingalo 2027" title in Amatic SC and a shorter height, so the info cards show on the first screen
+- The Survival Guide button on the 2027 pages reads "Survival Guide 2027", with a note that the 2027 guide is coming soon and the button opens the 2026 guide meanwhile
+
+### 🐛 Fixes
+- `/2026` shows the 2026 edition again (May 27 – 31, 2026). The 2026-09-17 date update had edited the 2026 components, so `/2026` had been showing the 2027 dates
+- The `/2025` hero shows the real 2025 dates, April 30 – May 5, 2025. It said "May 27 – June 1", a leftover from an earlier date update
+
+### 📚 Documentation
+- README, ESTRUTURA-ANOS, ARCHITECTURE and QUICKSTART updated for the 2027 edition, the Cloudflare Pages deploy and cloning on Windows
+
+## 2026-09-23 – Flicket sign-up removed
+- Removed the "Get Flickets" hero button from every edition, and the flicket form links from the two 2026 flickets blog posts
+- Removed the now-unused `hero.getTickets` string and the `ctaText` / `ctaLink` hero props
+
+## 2026-09-17 – 2027 dates on the homepage
+- Homepage dates, intro card, social cards, Get Involved text and page title moved to Flamingalo 2027 (May 12 – 17, 2027)
+
 ## [2.0.0] - 2025-11-26
 
 ### ✨ Complete Restructure

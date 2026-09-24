@@ -316,6 +316,33 @@ body {
   background: url('/mundo-bizarro-pano-v2.jpg') repeat-x;
 }
 
+.hero.hero-2027 {
+  background: #e74c76;
+  animation: none;
+  height: 65vh;
+  min-height: 500px;
+}
+
+.hero h1.hero-title-2027 {
+  position: absolute;
+  top: 110px;
+  left: 0;
+  right: 0;
+  /* stop at the triangle's tip: .hero::after is a 500px square, rotated, bottom -350px -> tip ~254px up */
+  bottom: 254px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  z-index: 1;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  font-size: clamp(64px, 9vw, 130px);
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+}
+
 .hero::after {
   content: '';
   display: block;
@@ -597,6 +624,16 @@ body {
 .section-cta {
   display: flex;
   justify-content: center;
+}
+
+.section-cta-note {
+  margin: 12px auto 0;
+  max-width: 480px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+  font-family: Verdana, sans-serif;
+  color: #5c6370;
 }
 
 /* Survival Guide Section */
